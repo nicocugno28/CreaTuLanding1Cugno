@@ -1,12 +1,12 @@
-import { Badge } from "@mui/material"
-import { ShoppingCart } from "@mui/icons-material"
-import { NavLink } from "react-router-dom"
-import { useContext } from "react"
-import { CarritoContext } from "../context/CarritoContext"
-
+import { Badge } from "@mui/material";
+import { ShoppingCart } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CarritoContext } from "../context/CarritoContext";
 
 export const NavBar = () => {
-    const { listaCompras } = useContext(CarritoContext)
+    const { listaCompras } = useContext(CarritoContext);
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -17,7 +17,20 @@ export const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink to='/' className="nav-link active">Compras</NavLink>
+                            <NavLink to='/' className="nav-link active">Productos</NavLink>
+                        </li>
+                        {/* Enlaces a las páginas de cada categoría */}
+                        <li className="nav-item">
+                            <NavLink to='/electronics' className="nav-link">Electrónicos</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/jewelery' className="nav-link">Joyería</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/mens-clothing' className="nav-link">Ropa para Hombres</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/womens-clothing' className="nav-link">Ropa para Mujeres</NavLink>
                         </li>
                     </ul>
                     <NavLink to='/carrito'>
@@ -28,5 +41,5 @@ export const NavBar = () => {
                 </div>
             </div>
         </nav>
-    )
-}
+    );
+};
