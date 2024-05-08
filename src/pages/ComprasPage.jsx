@@ -19,7 +19,7 @@ export const ComprasPage = () => {
 
     return (
         <>
-            <h1>Compras: </h1>
+            <h1>Productos: </h1>
             <hr />
 
             {productos.map(producto => (
