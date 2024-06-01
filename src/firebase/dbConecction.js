@@ -7,12 +7,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCIM5I883SHqq6I1mqzkrWiVxapbdxQkc8",
-    authDomain: "clothesstore-4a89a.firebaseapp.com",
-    projectId: "clothesstore-4a89a",
-    storageBucket: "clothesstore-4a89a.appspot.com",
-    messagingSenderId: "676972429862",
-    appId: "1:676972429862:web:2fcf62ea11c1ae63a0dce7"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGIN_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
